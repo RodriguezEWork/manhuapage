@@ -1,0 +1,31 @@
+.guias {
+    font-size: 50px;
+    color: black;
+    padding: 0.2rem 1rem;
+    background-color: azure;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+.guias:hover {
+    color: azure;
+    background-color: #179bd8;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in;
+}
+
+.search {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    border-radius: 0.2rem;
+    background-color: transparent;
+    border: none;
+    width: 80%;
+    display: block;
+    border-bottom: 0.3rem solid #179bd8;
+    transition: all 0.3s;
+}

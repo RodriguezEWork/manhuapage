@@ -1,0 +1,216 @@
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.table-header div {
+    display: flex;
+}
+
+.table-header input {
+    border-radius: 5px;
+    margin: 0 2rem;
+    width: 250px;
+}
+
+/* From cssbuttons.io by @meermubashar */
+.table-header button {
+    width: 140px;
+    height: 45px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.table-header button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #399ff3;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.table-header button:hover::before {
+    width: 100%;
+}
+
+.table-header button:hover {
+    color: white;
+}
+
+.table-header button:active:before {
+    background: #b9b9b9;
+}
+
+.serie-class thead tr td {
+    text-align: center;
+    padding: 1rem;
+    font-size: 20px;
+    background: #323C50;
+    color: white;
+}
+
+.serie-class tbody tr td {
+    color: #b9d2dd;
+    padding: 1rem;
+}
+
+.serie-class tbody tr:nth-child(odd) {
+    background: #323C50;
+}
+
+.serie-class tbody tr:nth-child(even) {
+    background: #2C3446;
+}
+
+.serie-class .acciones {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.serie-class .acciones button {
+    padding: 0.5rem;
+    border: none;
+    margin: 5px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    animation: all .8s ease;
+}
+
+.serie-class .acciones button:hover {
+    filter: brightness(1.6);
+}
+
+.serie-class .acciones .see {
+    background: #399ff3;
+}
+
+.serie-class .acciones .delete {
+    background: #eb1f1f;
+}
+
+.serie-class .acciones .update {
+    background: #16f861;
+}
+
+
+.pagination,
+.pagination li a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination li {
+    background-color: lightseagreen;
+    list-style: none;
+}
+
+.pagination a {
+    font-weight: 300;
+    padding-top: 1px;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-left-width: 0;
+    min-width: 44px;
+    min-height: 44px;
+    color: rgba(255, 255, 255, .85);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .35);
+}
+
+.pagination li.current {
+    background: rgb(33, 126, 121);
+}
+
+@media only screen and (max-width: 64.063em) {
+
+    .pagination li:first-child,
+    .pagination li:last-child {
+        /* screen readers only */
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .pagination li:nth-of-type(2) a {
+        border-left-width: 1px;
+    }
+
+}
+
+@media only screen and (max-width: 40.063em) {
+    .pagination li {
+        /* screen readers only */
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .pagination li.current,
+    .pagination li:first-of-type,
+    .pagination li:last-of-type,
+    .pagination li:nth-of-type(2),
+    .pagination li:nth-last-of-type(2) {
+        position: initial;
+        top: initial;
+        left: initial;
+    }
+
+    .pagination li:nth-of-type(2) a {
+        border-left-width: 0;
+    }
+
+}
+
+@media only screen and (max-width: 30.063em) {
+
+    h1 {
+        font-size: 1.35em !important;
+    }
+
+    .pagination li:first-child,
+    .pagination li:last-child {
+        /* screen readers only */
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .pagination li:nth-of-type(2) a {
+        border-left-width: 1px;
+    }
+
+}
+
+@media only screen and (max-width: 15.063em) {
+    /* For watches? */
+
+    .pagination li {
+        width: 50%;
+    }
+
+    .pagination li.current {
+        order: 2;
+        width: 100%;
+        border-left-width: 1px;
+
+    }
+
+}

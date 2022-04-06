@@ -1,0 +1,20 @@
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    color: #EBEBD3;
+    padding: 2em 0;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+
+header::after {
+    content: '';
+    clear: both;
+    display: block;
+}
