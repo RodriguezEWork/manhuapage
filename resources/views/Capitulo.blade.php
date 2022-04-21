@@ -19,7 +19,7 @@
                 <a href=" {{ route('Capitulo.show',  $previous[0]->id ) }} "><i class="fa fa-arrow-left guias" aria-hidden="true"
                 style="font-size: 20px; border-radius: 10px 0 0 10px;"></i></a>
             @endif
-            <a href=" {{ $imagenes[0]->serie }} "><i class="fa fa-home guias" aria-hidden="true" style="font-size: 20px;"></i></a>
+            <a href="/serie/{{ $imagenes[0]->serie }}"><i class="fa fa-home guias" aria-hidden="true" style="font-size: 20px;"></i></a>
             @if( count($next) )
                 <a href=" {{ route('Capitulo.show', $next[0]->id ) }} "><i class="fa fa-arrow-right guias" aria-hidden="true"
                 style="font-size: 20px; border-radius: 0 10px 10px 0;"></i></a>
@@ -30,7 +30,7 @@
 
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
         @foreach ($imagenes as $item)
-            <img src="{{ asset( $item->url )  }}" alt="" width="1000px" style=" max-width:100% ">
+            <img src="{{ asset( $item->url )  }}" alt="" loading="lazy" width="1000px" style=" max-width:100% ">
         @endforeach
     </div>
 
@@ -45,7 +45,7 @@
                 <a href=" {{ route('Capitulo.show',  $previous[0]->id ) }} "><i class="fa fa-arrow-left guias" aria-hidden="true"
                 style="font-size: 20px; border-radius: 10px 0 0 10px;"></i></a>
             @endif
-            <a href=" {{ $imagenes[0]->serie }} "><i class="fa fa-home guias" aria-hidden="true" style="font-size: 20px;"></i></a>
+            <a href="/serie/{{ $imagenes[0]->serie }}"><i class="fa fa-home guias" aria-hidden="true" style="font-size: 20px;"></i></a>
             @if( count($next) )
                 <a href=" {{ route('Capitulo.show', $next[0]->id ) }} "><i class="fa fa-arrow-right guias" aria-hidden="true"
                 style="font-size: 20px; border-radius: 0 10px 10px 0;"></i></a>
